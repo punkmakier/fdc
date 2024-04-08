@@ -1,0 +1,255 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  min-height: 100vh;
+  display: flex;
+  background-color: #f0f0f0;
+}
+.sidebar {
+  width: 18vw;
+  background: rgb(0, 32, 70);
+  background: linear-gradient(
+    48deg,
+    rgba(0, 32, 70, 1) 0%,
+    rgba(20, 70, 130, 1) 100%
+  );
+  position: relative;
+}
+
+.content {
+  flex-grow: 2;
+  display: flex;
+  overflow: hidden;
+  position: relative;
+  width: 100%;
+}
+
+.sidebar img {
+  width: clamp(3.5rem, 1vw, 4vw);
+  float: right;
+  padding-left: 10px;
+}
+.sidebar span {
+  font-size: clamp(1rem, 1.2vw, 4rem);
+  font-weight: 600;
+  line-height: 0.9px;
+  color: #fff;
+}
+.close-sidebar {
+  position: absolute;
+  right: 3%;
+  top: 1%;
+  padding: 10px;
+  cursor: pointer;
+  color: #fff;
+}
+.sidebar p {
+  font-size: 0.8rem;
+  margin-top: 0px;
+  font-weight: 100;
+  color: #fff;
+  letter-spacing: 1px;
+}
+.dasboard-text {
+  text-align: center;
+  padding: 10px;
+  border-bottom: 1.5px solid #f0f0f0;
+  border-top: 1.5px solid #f0f0f0;
+  width: 100%;
+}
+.dasboard-text small {
+  color: #fff;
+}
+.menu {
+  width: 100%;
+}
+.menu .item {
+  position: relative;
+  cursor: pointer;
+}
+
+.sidebar .menu .item a {
+  color: #fff;
+  font-size: 0.9rem;
+  text-decoration: none;
+  display: block;
+  padding: 5px 30px;
+  line-height: 40px;
+  font-weight: 600;
+
+}
+.sidebar .menu .item a:hover {
+  margin-left: -4px;
+  transition: 0.3s ease-in-out;
+}
+.sidebar .menu .item .sub-menu a:hover {
+  margin-left: -4px;
+  transition: 0.3s ease-in-out;
+}
+
+.dropdown-icon {
+  position: absolute;
+  right: 0;
+  margin: 20px;
+  transition: 0.3s ease;
+  font-size: 0.9rem;
+}
+.sidebar .menu .item .sub-menu {
+  display: none;
+}
+.sidebar .menu .item .sub-menu a {
+  margin-left: 10px;
+  font-weight: 400;
+}
+.rotate {
+  transform: rotate(90deg);
+}
+.inner-content{
+  width: 100%;
+  height: 100vh;
+  position: relative;
+
+}
+.header {
+  position: relative;
+  width: 100%;
+  height: 10vh;
+  background-color: #fff;
+  display: flex;
+  align-items: center;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.192);
+}
+.header h3 {
+  margin-left: 20px;
+  width: 50rem;
+}
+.show-sidebar {
+  font-size: 1.2rem;
+  cursor: pointer;
+  display: none;
+  z-index: 9999;
+  margin-top: -8px;
+  margin-left: 30px;
+}
+.cards-panel {
+  width: 100%;
+  height: 20vh;
+  z-index: 99;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0 30px;
+}
+
+.group-card {
+  width: clamp(18rem, 10vw, 10rem);
+  height: 120px;
+  margin: 10px;
+  border-radius: 10px;
+  border-left: 2.5px solid #fff;
+  position: relative;
+  transition: 0.2s;
+}
+.group-card:hover {
+  transform: scale(1.05);
+  z-index: 99999;
+}
+
+.group-card i {
+  font-size: 30px;
+  margin-left: 30px;
+  margin-top: 35px;
+}
+.inner-card {
+  float: right;
+  margin-right: 35px;
+  margin-top: 20px;
+}
+.inner-card span {
+  font-weight: 600;
+  font-size: 0.9rem;
+}
+.inner-card p{
+  margin-bottom: 0;
+  font-size: 0.9rem;
+  line-height: 1.2rem;
+}
+.drac-card-footer {
+  position: absolute;
+  text-decoration: none;
+  padding: 5px;
+  width: 100%;
+  text-align: center;
+  background-color: rgba(255, 255, 255, 0.089);
+
+  bottom: 0;
+  cursor: pointer;
+}
+.drac-card-footer a {
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 0.8rem;
+}
+.drac-card-footer:hover {
+  transition: 0.2s ease-in-out;
+  background-color: rgba(0, 0, 0, 0.062);
+}
+.card-color-1 {
+  background: rgb(255, 156, 48);
+  background: linear-gradient(
+    48deg,
+    rgba(255, 156, 48, 1) 0%,
+    rgba(236, 181, 124, 1) 100%
+  );
+}
+.card-color-2 {
+  background: rgb(191, 200, 248);
+  background: linear-gradient(
+    48deg,
+    rgba(191, 200, 248, 1) 0%,
+    rgba(240, 242, 254, 1) 100%
+  );
+}
+.card-color-3 {
+  background: rgb(46, 246, 59);
+  background: linear-gradient(
+    48deg,
+    rgba(46, 246, 59, 1) 0%,
+    rgba(240, 242, 254, 1) 100%
+  );
+}
+
+.logout {
+  float: right;
+  width: 100%;
+  margin-right: 40px;
+}
+.fa-envelope {
+  margin-right: 40px;
+  font-size: 1.5rem;
+  color: #002046;
+}
+.fa-right-from-bracket {
+  margin-left: 10px;
+}
+
+
+.table-content{
+  width: 100%;
+  position: relative;
+  margin: 0 auto;
+  padding: 0 130px;
+  margin-top: 30px;
+}
+.table-content h5{
+  margin-bottom: 20px;
+}
+
+.itemListsTable{
+  padding: 0 130px;
+  margin-top: 40px;
+}
